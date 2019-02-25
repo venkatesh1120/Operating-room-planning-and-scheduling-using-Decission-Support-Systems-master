@@ -1,0 +1,120 @@
+<html>
+<head>
+<script>
+function myfunction()
+   {
+       
+       var x =document.getElementById('calender').value;
+       var xs =x.split('-');
+       var l=parseInt(xs[0]);
+       var l1=xs[1];
+       var l2=xs[2];
+       var y =document.getElementById('dob').value;
+       var ys =y.split('-');
+       var k=parseInt(ys[0]);
+       var k1=ys[1];
+       var k2=ys[2];
+       var z=l-k;
+       document.getElementById('age').value=z;
+       
+   }
+                                    
+     </script>
+
+
+</head>
+
+<body>
+<form method="post" action="signup.php">
+           
+                    <table align="center" style="margin-top:100px" cellpadding="10px" spacing:"3px">
+                  
+                      
+                        <tr><td>Registration Date:</td>
+                        <td><input type="date" name="calender" id="calender"/></td></tr>
+                        <tr><td>First Name:</td>
+                        <td><input type="text" name="firstname" /></td></tr>
+                        <tr><td>Last Name:</td>
+                        <td><input type="text" name="lastname" /></td></tr>
+						
+                         <tr><td>Gender:</td>
+						 <td> <input type="radio" name="gender" value="Male" checked>Male </br>
+                        <input type="radio" name="gender" value="Female">Female</td></tr>
+						
+                         <tr><td>Occupation:</td>
+                        <td><input type="text" name="occupation" /></td></tr>
+						
+                      <tr><td>Date Of Birth:
+                              </td><td><input type="date" name="dob" id="dob"/></td></tr>
+						
+						<tr><td>Age:</td>
+                        <td><input type="text" name="age"  value="" id="age" onfocus="myfunction()" /></td></tr>   
+             <tr><td>Blood Group</td> <td>       <select name="bg">
+   <option value=""></option>
+  <option value="a+">A+</option>
+  <option value="ab+">AB+</option>
+  <option value="b+">B+</option>
+  <option value="o+">O+</option>
+  <option value="a-">A-</option>
+  <option value="ab-">AB-</option>
+  <option value="b-">B-</option>
+  <option value="o-">O-</option>
+</select></td></tr>
+
+     <tr><td>Marital Status</td> <td>        <select name="ms"> 
+                <option value=""></option>
+  <option value="single">Single</option>
+  <option value="married">Married</option>
+</select></td></tr>
+
+ <tr><td>Email Id:</td><td> <input type="text" name="email" /><br /></td></tr>
+  <tr><td>Telephone:</td><td> <input type="text" name="phone" /><br /></td></tr>
+  <tr><td>Address:</td><td> <input type="textarea" name="ad" /><br /></td></tr>
+<tr><td>Department:</td><td>     <select name="dep">
+                <option value=""></option>
+  <option value="Orthopedic">Orthopedic</option>
+  <option value="dental">Dental</option>
+  <option value="cardiology">Cardiology</option>
+  <option value="radiology">Radiology</option>
+  <option value="ontology">Ontology</option>
+  <option value="gynecology">Gynecology</option>
+  <option value="neurology">Neurology</option>
+</select> </td></tr>
+<tr><td>Consultant Name:</td><td> <input type="text" name="cn" /></td></tr>
+<tr><td>Patient Type</td> <td>        <select name="pt">
+                <option value=""></option>
+  <option value="emergency">Emergency</option>
+  
+   <option value="inpatient">Inpatient</option>
+   <option value="outpatient">Outpatient</option>
+   <option value="daypatient">Daypatient</option>
+  
+  
+  
+</select></td></tr>
+
+             <tr><td>Type of Surgery:</td><td>    <select name="tos">
+   <option value=""></option>
+  <option value="normal">Normal</option>
+  <option value="critical">Critical</option>
+  <option value="regular">Regular</option>
+  <option value="scheduled">Scheduled</option>
+  <option value="complicated">Complicated</option>
+  
+</select></td></tr>
+              
+            <tr><td>Medical History
+                              </td><td><input type="radio" name="history" value="yes"/> Yes
+                                  <input type="radio" name="history" value="no" checked/> No
+                              </td></tr>          
+                       <tr><td>  <input type="submit" value="Register" name="register"/>&nbsp;&nbsp;
+                    <input type="reset" value="Reset"/></td>
+                           </tr>
+                           </table>
+		
+ 
+	</form>
+	
+	
+	</body>
+</html>

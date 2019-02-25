@@ -1,0 +1,264 @@
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+	<script >
+	
+	//username
+	function user()
+	{
+	
+	var x = document.getElementById("username").value;
+	
+    if(x.length<1|| x.length>15)
+	{
+	
+	document.getElementById('username').style.borderColor = 'red';
+	document.getElementById('userid').innerHTML = 'Please enter your username ';
+	
+	}
+	else
+	{
+	
+	document.getElementById('username').style.borderColor = 'grey';
+	document.getElementById('userid').innerHTML ='';
+	}	
+	
+	}
+	
+	//first name
+	function first()
+	{
+	
+	var fn = document.getElementById("firstname").value;
+	
+    if(fn.length<1|| fn.length>15)
+	{
+	document.getElementById('firstname').style.borderColor = 'red';
+	document.getElementById('firstid').innerHTML = 'Please enter your firstname ';
+	
+	}
+	else
+	{
+	
+	document.getElementById('firstname').style.borderColor = 'grey';
+	document.getElementById('firstid').innerHTML ='';
+	}	
+	}
+	
+	//last name
+	function last()
+	{
+	var ln = document.getElementById("lastname").value;
+	
+    if(ln.length<1|| ln.length>15)
+	{
+	document.getElementById('lastname').style.borderColor = 'red';
+	document.getElementById('lastid').innerHTML = 'Please enter your lastname ';
+	
+	}
+	else
+	{
+	
+	document.getElementById('lastname').style.borderColor = 'grey';
+	document.getElementById('lastid').innerHTML ='';
+	}	
+	}
+	
+	//date
+	function datefn()
+	{
+	var da = document.getElementById("date").value;
+	
+    if(da.length<10|| da.length>11)
+	{
+	document.getElementById('date').style.borderColor = 'red';
+	document.getElementById('dateid').innerHTML = 'Please check ur dob ';
+	
+	}
+	else
+	{
+	
+	document.getElementById('date').style.borderColor = 'grey';
+	document.getElementById('dateid').innerHTML ='';
+	}	
+	}
+	
+	// email
+	function emailfn()
+	{
+	var em = document.getElementById("email").value;
+ 
+    if(em.length<9|| em.length>30)
+	{
+	document.getElementById('email').style.borderColor = 'red';
+	document.getElementById('emailid').innerHTML = 'Please check ur email ';
+	
+	}
+	else
+	{
+	
+	document.getElementById('email').style.borderColor = 'grey';
+	document.getElementById('emailid').innerHTML ='';
+	}	
+	}
+	
+	// pno
+	function pnofn()
+	{
+	var pn = document.getElementById("pno").value;
+	
+    if(pn.length<9|| pn.length>11)
+	{
+	document.getElementById('pno').style.borderColor = 'red';
+	document.getElementById('pnoid').innerHTML = 'Please check ur pno ';
+	
+	}
+	else
+	{
+	
+	document.getElementById('pno').style.borderColor = 'grey';
+	document.getElementById('pnoid').innerHTML ='';
+	}	
+	}
+	
+	
+	// pwd
+	function pwdfn()
+	{
+	var pw = document.getElementById("pwd").value;
+	
+    if(pw.length<8|| pw.length>15)
+	{
+	document.getElementById('pwd').style.borderColor = 'red';
+	document.getElementById('pwdid').innerHTML = 'Please check ur password ';
+	
+	}
+	else
+	{
+	
+	document.getElementById('pwd').style.borderColor = 'grey';
+	document.getElementById('pwdid').innerHTML ='';
+	}	
+	}
+	
+	
+	
+	function main()
+	{
+	var x = document.getElementById("username").value;
+	var fn = document.getElementById("firstname").value;
+	var ln = document.getElementById("lastname").value;
+	var da = document.getElementById("date").value;
+	var em = document.getElementById("email").value;
+	var pn = document.getElementById("pno").value;
+	var pw = document.getElementById("pwd").value;
+	var pw2 = document.getElementById("pwd2").value;
+	
+	
+	 if(x.length<1|| x.length>15)
+	{
+	document.getElementById('username').style.borderColor = 'red';
+	document.getElementById('userid').innerHTML = 'Please enter your username ';
+	return false;
+	
+	}else if(fn.length<1|| fn.length>15)
+	{
+	document.getElementById('firstname').style.borderColor = 'red';
+	document.getElementById('firstid').innerHTML = 'Please enter your firstname ';
+	return false;
+	} else  if(ln.length<1|| ln.length>15)
+	{
+	document.getElementById('lastname').style.borderColor = 'red';
+	document.getElementById('lastid').innerHTML = 'Please enter your lastname ';
+	return false;
+	} else if(da.length<10|| da.length>11)
+	{
+	document.getElementById('date').style.borderColor = 'red';
+	document.getElementById('dateid').innerHTML = 'Please check ur dob ';
+	return false;
+	} else if(em.length<9|| em.length>17)
+	{
+	document.getElementById('email').style.borderColor = 'red';
+	document.getElementById('emailid').innerHTML = 'Please check ur email ';
+	return false;
+	
+	} else  if(pn.length<9|| pn.length>11)
+	{
+	document.getElementById('pno').style.borderColor = 'red';
+	document.getElementById('pnoid').innerHTML = 'Please check ur pno ';
+	return false;
+	
+	} else  if(pw.length<8|| pw.length>15)
+	{
+	document.getElementById('pwd').style.borderColor = 'red';
+	document.getElementById('pwdid').innerHTML = 'Please check ur password ';
+	return false;
+	
+	} else  if(pw==pw2)
+	{
+	if(pw.length< 8)
+	{
+	document.getElementById('pwd2').style.borderColor = 'red';
+	document.getElementById('pwd2id').innerHTML = 'Please check ur password ';
+	return false;
+	}else
+	{
+	alert("this is wahta u want");
+	document.getElementById('pwd2').style.borderColor = 'grey';
+	document.getElementById('pwd2id').innerHTML ='';
+	}
+	}
+	else
+	{
+	document.getElementById('pwd2').style.borderColor = 'red';
+	document.getElementById('pwd2id').innerHTML = 'Password does not matched';
+	return false;
+	}	
+	
+
+	}
+	</script>
+	
+	
+    </head>
+	<body  style="background-image: url('bg.jpg'); background-size:cover;background-repeat:no-repeat;background-position: center center;">
+	<form method="post" onsubmit="return main()" action="signupdoc.php">
+	
+	<div id="login-box" style="min-height:830px;">
+  <div class="left">
+  
+    <h5>Sign up</h5>
+    
+    <input type="text" name="username" placeholder="Username" id="username" /><span id="userid"style="color: red;"></span>
+	
+    <input type="text" name="firstname" placeholder="Firstname" onfocus="user()" id="firstname" /><span id="firstid"style="color: red;"></span>
+	
+    <input type="text" name="lastname" placeholder="Lastname" onfocus="first()" id="lastname"/><span id="lastid"style="color: red;"></span>
+	
+    <input name="dob" type="date"   onfocus="last()" id="date" false/><span id="dateid"style="color: red;"></span>
+	
+    <input type="text" name="email" placeholder="E-mail" onfocus="datefn()" id="email"/><span id="emailid"style="color: red;"></span>
+	<input type="text" name="dep" placeholder="Department" id="username" /><span id="userid"style="color: red;"></span>
+    <input type="text" name="pno" placeholder="Social security number" onfocus="emailfn()" id="pno"/><span id="pnoid"style="color: red;"></span>
+	 <input type="text" name="idi" placeholder="Id Issued" id="username" /><span id="userid"style="color: red;"></span>
+	 
+    <input type="password" name="pt" placeholder="Password" onfocus="pnofn()" id="pwd"/><span id="pwdid"style="color: red;"></span>
+	
+    <input type="password" name="tos" placeholder="Retype password" onfocus="pwdfn()" id="pwd2"/><span id="pwd2id"style="color: red;"></span>
+	
+    
+
+    <input type="submit" name="signup" value="Register"  />
+	  <a href="index.html">Home</a>
+	
+  </div>
+  
+  <div class="right" style="background-image: url('doctorpage.jpg'); background-size:cover;background-repeat:no-repeat;background-position: center center;">
+     </div>
+  
+
+</div>
+</form>
+</body>
+
+</html>
